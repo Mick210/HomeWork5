@@ -9,9 +9,7 @@ public class Main {
         task3();
         task4();
         task5();
-
     }
-
     public static void task1() {
         System.out.println("Задача 1");
         byte clientOS = 1;
@@ -21,7 +19,6 @@ public class Main {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
     }
-
     public static void task2() {
         System.out.println("Задача 2");
         byte clientOS = 0;
@@ -46,7 +43,6 @@ public class Main {
     public static void task3() {
         System.out.println("Задача 3");
         short year = 1080;
-        boolean leapYear = year % 400==0;
         if (year%400==0 || year%4==0 && year%100!=0) {
             System.out.println("Год является високосным");
         } else System.out.println("Год не является високосным");
@@ -90,7 +86,6 @@ public class Main {
                 System.out.println("Такого месяца не существует");
 
         }
-
     }
 }
 
