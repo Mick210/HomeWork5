@@ -10,54 +10,71 @@ public class Main {
         task4();
         task5();
     }
+
     public static void task1() {
         System.out.println("Задача 1");
-        byte clientOS = 1;
-        if (clientOS == 0) {
+        int clientOs = 0;
+        int iOs = 0;
+        int android = 1;
+        if (clientOs == iOs) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (clientOS == 1) {
+        } else if (clientOs == android) {
             System.out.println("Установите версию приложения для Android по ссылке");
+        } else {
+            System.out.println("Ваша ОС не поддерживается");
         }
     }
+
     public static void task2() {
         System.out.println("Задача 2");
-        byte clientOS = 0;
-        short oldVersion = 2014;
-        switch (clientOS) {
+        int clientOs = 1;
+        // ( clientOs iOs = 0, android = 1 )
+        int oldVersion = 2016;
+        int checkYear = 2015;
+        switch (clientOs) {
             case 0:
-                if (oldVersion > 2015) {
+                if (oldVersion >= checkYear) {
                     System.out.println("Установите версию приложения для iOS по ссылке");
                 } else {
                     System.out.println("Установите облегченную версию приложения для iOS по ссылке");
                 }
                 break;
             case 1:
-                if (oldVersion > 2015) {
+                if (oldVersion >= checkYear) {
                     System.out.println("Установите версию приложения для Android по ссылке");
                 } else {
-                    System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+                    System.out.println("Установите облегченную версию приложения для Android по ссылке");
                 }
                 break;
+            default:
+                System.out.println("Ваша ОС не поддерживается");
         }
     }
+
     public static void task3() {
         System.out.println("Задача 3");
         short year = 1080;
-        if (year%400==0 || year%4==0 && year%100!=0) {
+        if (year % 400 == 0 || year % 4 == 0 && year % 100 != 0) {
             System.out.println("Год является високосным");
-        } else System.out.println("Год не является високосным");
+        } else {
+            System.out.println("Год не является високосным");
+        }
     }
+
     public static void task4() {
         System.out.println("Задача 4");
         short deliveryDistance = 95;
-        if (deliveryDistance<20) {
+        if (deliveryDistance < 20) {
             System.out.println("Потребуется 1 день");
-        } else if (deliveryDistance>=20 && deliveryDistance<60) {
+        } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
             System.out.println("Потребуется 2 дня");
-        } else if (deliveryDistance>=60 && deliveryDistance<=100) {
+        } else if (deliveryDistance >= 60 && deliveryDistance <= 100) {
             System.out.println("Потребуется 3 дня");
-        } else System.out.println("Доставки нет");
+        } else {
+            System.out.println("Доставки нет");
+        }
     }
+
     public static void task5() {
         System.out.println("Задача 5");
         byte monthNumber = 12;
